@@ -40,7 +40,6 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
 
-
 * This application user experience is intuitive and easy to navigate.
 
 * This application user interface style is clean and polished.
@@ -48,10 +47,13 @@ THEN the password is either displayed in an alert or written to the page
 
 * Application deployed at live URL.
 
-
-* Application GitHub URL submitted.
-
+https://kajalpatel20.github.io/Password-Generator/
 
 * GitHub repository that contains application code.
 
-![screenshot](screenShot.png)
+https://github.com/kajalpatel20/Password-Generator
+
+Screenshot
+![Website screenshot]
+
+assets/images/screenshot-Password-Generator/Screen Shot 2021-01-11 at 6.26.16 PM.png
