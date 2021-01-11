@@ -47,11 +47,10 @@ THEN the password is either displayed in an alert or written to the page
 
 
 * Application deployed at live URL.
-
+https://kajalpatel20.github.io/Password-Generator/
 
 * Application GitHub URL submitted.
 
 
 * GitHub repository that contains application code.
 
-![screenshot](screenShot.png)
