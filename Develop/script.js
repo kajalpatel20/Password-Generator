@@ -14,14 +14,14 @@ var specialChar = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", 
 
 function generatePassword() {
   // Get user password length 
-  var passwordLength = prompt("How long would you like the password? (Please pick between 8-20characters)");
+  var passwordLength = prompt("How long would you like the password? (Please pick between 8-128characters)");
   passwordLength = parseInt(passwordLength) || 0; // Not allow blank
-  if (passwordLength < 8 || passwordLength > 20) {
-    alert("Your selected password length is not supported. Please pick between 8 to 20");
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Your selected password length is not supported. Please pick between 8 to 128");
     return generatePassword();
   }
 
-  // Confirm character types to use
+  // Confirm character with all possible options for lowercase letters, uppercase letters, numbers and special characters
   alert("Great. You have requested a password that will be " +passwordLength+" in length. Now Let's confirm the type of characters you would like to use. Please make sure you select atleast one");
   wantlowerCase = confirm("Do you want to include a lowercase letter?");
   wantupperCase = confirm("Do you want to include a uppercase letter?");
@@ -37,6 +37,7 @@ function generatePassword() {
   var password = "";
   var userPasswordarr = [];
 
+  //use if statement to return alert box in case no criteria is selected
   if (wantlowerCase) {
     userPasswordarr = userPasswordarr.concat(alphabetLower);
   }
