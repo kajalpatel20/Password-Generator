@@ -56,4 +56,4 @@ https://github.com/kajalpatel20/Password-Generator
 Screenshot
 ![Website screenshot]
 
-assets/images/screenshot-Password-Generator/Screen Shot 2021-01-11 at 6.26.16 PM.png
+Password-Generator/Screen Shot 2021-01-11 at 6.26.16 PM.png
