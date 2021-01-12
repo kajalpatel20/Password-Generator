@@ -57,3 +57,6 @@ https://kajalpatel20.github.io/Password-Generator/
 * GitHub repository that contains application code.
 
 https://github.com/kajalpatel20/Password-Generator
+
+
+![image info](./pictures/image.png)
