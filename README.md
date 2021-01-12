@@ -61,4 +61,4 @@ https://github.com/kajalpatel20/Password-Generator
 ![Website screenshot]
 
 (assets/images/screenshot.png)
-![image info](./pictures/screenShot.png)
+![image info](https://kajalpatel20.github.io/Password-Generator)
