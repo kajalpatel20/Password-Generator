@@ -1,4 +1,4 @@
-Password Generator
+#  Password Generator
 
 
 This assignment requires to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This application will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that I write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
@@ -53,7 +53,5 @@ https://kajalpatel20.github.io/Password-Generator/
 
 https://github.com/kajalpatel20/Password-Generator
 
-Screenshot
-![Website screenshot]
 
-Password-Generator/Screen Shot 2021-01-11 at 6.26.16 PM.png
+
