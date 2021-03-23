@@ -1,4 +1,4 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
 //define global variables for password generation
@@ -9,62 +9,57 @@ var alphabetUpper = alphabetLower.map(
   }
   );
 var numbers = [0,1,2,3,4,5,6,7,8,9];
-var specialChar = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"];
+var specialCharacter = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", ">", "?", "@", "[" , "]", "^", "_", "`", "{", "|", "}", "~"];
 
 
 function generatePassword() {
-  // Get user password length 
-  var passwordLength = prompt("How long would you like the password? (Please pick between 8-128characters)");
-  passwordLength = parseInt(passwordLength) || 0; // Not allow blank
+ 
+  var passwordLength = prompt("How long you want your password to be? (Please pick between 8-128characters)");
+  passwordLength = parseInt(passwordLength) || 0; 
   if (passwordLength < 8 || passwordLength > 128) {
-    alert("Your selected password length is not supported. Please pick between 8 to 128");
+    alert("Your selected password length is not enough. Please choose 8 to 128");
     return generatePassword();
   }
 
-  // Confirm character with all possible options for lowercase letters, uppercase letters, numbers and special characters
-  alert("Great. You have requested a password that will be " +passwordLength+" in length. Now Let's confirm the type of characters you would like to use. Please make sure you select atleast one");
-  wantlowerCase = confirm("Do you want to include a lowercase letter?");
-  wantupperCase = confirm("Do you want to include a uppercase letter?");
-  wantNumbers = confirm("Do you want to include numbers?");
-  wantspecialChar = confirm("Do you want to include a special character?");
+  alert("Great! " + passwordLength + " in length.");
+  lowerCase = confirm("Do you want to add a lowercase letter?");
+  upperCase = confirm("Do you want to add a uppercase letter?");
+  Numbers = confirm("Do you want to add numbers?");
+  specialCharacter = confirm("Do you want to add a special character?");
 
-  if (!wantlowerCase && !wantupperCase && !wantNumbers && !wantspecialChar) {
-    alert("Please select atleast one type of characters. Lets try again.");
+  if (!lowerCase && !upperCase && !Numbers && !specialCharacter) {
+    alert("Please select atleast one of the character!");
     return generatePassword();
   }
 
-  //Clear password and define password array for random password to generate from
+ 
   var password = "";
-  var userPasswordarr = [];
+  var userPassword = [];
 
-  //use if statement to return alert box in case no criteria is selected
-  if (wantlowerCase) {
-    userPasswordarr = userPasswordarr.concat(alphabetLower);
+  if (lowerCase) {
+    userPassword = userPassword.concat(alphabetLower);
   }
 
-  if (wantupperCase) {
-    userPasswordarr = userPasswordarr.concat(alphabetUpper);
+  if (upperCase) {
+    userPassword = userPassword.concat(alphabetUpper);
   }
 
-  if (wantNumbers) {
-    userPasswordarr = userPasswordarr.concat(numbers);
+  if (Numbers) {
+    userPassword = userPassword.concat(numbers);
   }
 
-  if (wantspecialChar) {
-    userPasswordarr = userPasswordarr.concat(specialChar);
+  if (specialCharacter) {
+    userPassword = userPassword.concat(specialCharacter);
   }
 
   //generate password
   for (i = 0; i < passwordLength; i++) {
-    randomDigit = (Math.floor(Math.random() * userPasswordarr.length));
-    password += userPasswordarr[randomDigit];
+    randomDigit = (Math.floor(Math.random() * userPassword.length));
+    password += userPassword[randomDigit];
   }
 
 return password;
-
 }
-
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -73,5 +68,4 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
