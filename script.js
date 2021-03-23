@@ -14,7 +14,7 @@ var specialCharacter = ["!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", 
 
 function generatePassword() {
  
-  var passwordLength = prompt("How long you want your password to be? (Please pick between 8-128characters)");
+  var passwordLength = prompt("How long do you want your password to be? (Please pick between 8-128characters)");
   passwordLength = parseInt(passwordLength) || 0; 
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Your selected password length is not enough. Please choose 8 to 128");
